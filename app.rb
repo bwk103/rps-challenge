@@ -23,6 +23,7 @@ class RPSApp < Sinatra::Base
 
   get '/choice' do
     @game.player.set_weapon(Weapon.new(params['choice']))
+    @game.decide_result
     erb(:result)
   end
 

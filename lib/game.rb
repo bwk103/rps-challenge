@@ -1,5 +1,5 @@
 class Game
-  attr_reader :player, :computer
+  attr_reader :player, :computer, :result
 
   def initialize(player, computer=Computer.new)
     @player = player
@@ -12,5 +12,21 @@ class Game
 
   def self.current_game
     @current_game
+  end
+
+  def decide_result
+    return @result = :tie if a_tie?
+    return @result = :lose unless player_wins?
+    @result = :win
+  end
+
+  private
+
+  def a_tie?
+    player.weapon.type == computer.weapon.type
+  end
+
+  def player_wins?
+    player.weapon.beats?(computer.weapon)
   end
 end
