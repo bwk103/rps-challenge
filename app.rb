@@ -1,6 +1,9 @@
 require 'sinatra/base'
 require './lib/player'
 require './lib/game'
+require './lib/computer'
+require './lib/weapon'
+require './lib/computer'
 
 class RPSApp < Sinatra::Base
   enable :sessions
@@ -19,7 +22,7 @@ class RPSApp < Sinatra::Base
   end
 
   get '/choice' do
-    @game.player.set_weapon = Weapon.new(params['choice'])
+    @game.player.set_weapon(Weapon.new(params['choice']))
     erb(:result)
   end
 
