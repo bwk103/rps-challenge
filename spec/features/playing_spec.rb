@@ -13,4 +13,10 @@ feature 'Players can select options', type: :feature do
     sign_in_and_play
     expect(page).to have_button 'Scissors'
   end
+
+  # scenario 'Players are given confirmation of their selection' do
+  #   sign_in_and_play
+  #   click_button 'Paper'
+  #   expect(page).to have_content 'Ben chose Paper'
+  # end
 end

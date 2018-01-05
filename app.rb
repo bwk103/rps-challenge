@@ -9,7 +9,12 @@ class RPSApp < Sinatra::Base
   end
 
   get '/play' do
-    @player = Player.new(params['player_name'])
+    @game = Game.new(Player.new(params['player_name']))
     erb(:play)
+  end
+
+  get '/choice' do
+    @choice= params['choice']
+    erb(:result)
   end
 end
