@@ -8,6 +8,6 @@ feature 'Player names', type: :feature do
     visit '/'
     fill_in('player_name', with: 'Bob')
     click_button "Let's Play"
-    expect(page).to have_content 'Welcome to RPS Challenge, Bob' 
+    expect(page).to have_content 'Welcome to RPS Challenge, Bob'
   end
 end

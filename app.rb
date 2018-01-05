@@ -1,5 +1,5 @@
 require 'sinatra/base'
-
+require './lib/player'
 
 class RPSApp < Sinatra::Base
   enable :sessions
@@ -9,7 +9,7 @@ class RPSApp < Sinatra::Base
   end
 
   get '/play' do
-    @player_name = params['player_name']
+    @player = Player.new(params['player_name'])
     erb(:play)
   end
 end
