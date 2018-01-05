@@ -17,6 +17,6 @@ feature 'Players can select options', type: :feature do
   # scenario 'Players are given confirmation of their selection' do
   #   sign_in_and_play
   #   click_button 'Paper'
-  #   expect(page).to have_content 'Ben chose Paper'
+  #   expect(page).to have_content 'Bob chose Paper'
   # end
 end
