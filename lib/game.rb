@@ -1,9 +1,9 @@
 class Game
-  attr_reader :player, :computer, :result
+  attr_reader :player1, :player2, :result
 
-  def initialize(player, computer=Computer.new)
-    @player = player
-    @computer = computer
+  def initialize(player1, player2=Computer.new)
+    @player1 = player1
+    @player2 = player2
   end
 
   def self.create_game(player)
@@ -23,10 +23,10 @@ class Game
   private
 
   def a_tie?
-    player.weapon.type == computer.weapon.type
+    player1.weapon.type == player2.weapon.type
   end
 
   def player_wins?
-    player.weapon.beats?(computer.weapon)
+    player1.weapon.beats?(player2.weapon)
   end
 end

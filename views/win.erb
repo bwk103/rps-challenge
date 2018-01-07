@@ -1,0 +1,18 @@
+<div class="row result">
+  <div class="col-md-12 text-center">
+    <h1>You win!</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6 text-center">
+    <h2><%= @game.player1.name %> chose <%= @game.player1.weapon.type%></h2>
+  </div>
+  <div class="col-lg-6 text-center">
+    <h2>Computer chose <%= @game.player2.weapon.type%></h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 text-center">
+    <a class="btn btn-primary" href="/">Play Again</a>
+  </div>
+</div>

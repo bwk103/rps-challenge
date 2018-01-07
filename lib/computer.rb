@@ -1,5 +1,6 @@
 class Computer
-    attr_reader :weapon
+  WEAPONS = ['Rock', 'Paper', 'Scissors']
+  attr_reader :weapon
 
   def initialize
     @weapon = Weapon.new(get_weapon)
@@ -8,7 +9,6 @@ class Computer
   private
 
   def get_weapon
-    ['Rock', 'Paper', 'Scissors'].sample
+    WEAPONS.sample
   end
-
 end

@@ -17,14 +17,13 @@ class RPSApp < Sinatra::Base
   end
 
   get '/play' do
-    @game = Game.create_game(Player.new(params['player_name']))
+    @game = Game.create_game(Player.new(params['player1_name']))
     erb(:play)
   end
 
   get '/choice' do
-    @game.player.set_weapon(Weapon.new(params['choice']))
+    @game.player1.set_weapon(Weapon.new(params['choice']))
     @game.decide_result
-    erb(:result)
+    erb(@game.result)
   end
-
 end

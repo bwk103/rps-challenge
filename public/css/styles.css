@@ -1,0 +1,42 @@
+body {
+  background: #19415E;
+  font-family: 'Concert One', cursive;
+}
+
+h1 {
+  margin-top: 50px;
+  color: #EAF9F9;
+  font-family: 'Concert One', cursive;
+  text-shadow: 1px 2px #9AD5E2
+}
+
+form {
+  color: #EAF9F9
+}
+
+label {
+  color: #EAF9F9
+}
+
+button .svg-inline--fa {
+  font-size: 280px;
+}
+
+.result h1 {
+  font-size: 80px;
+}
+
+.btn {
+  margin: 10px 10px
+}
+
+.btn-primary {
+  font-size: 30px;
+  color: #EAF9F9;
+  letter-spacing: 1px;
+  line-height: 25px;
+  border: 2px solid #EAF9F9;
+  border-radius: 40px;
+  background: transparent;
+  transition: all 0.3s ease 0s;
+}

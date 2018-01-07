@@ -1,7 +1,21 @@
-<h1>Welcome to RPS Challenge</h1>
 
-<form action="/play" >
-  <label for="player_name">Enter your name:</label>
-  <input type="text" name="player_name">
-  <input type="submit" value="Let's Play">
-</form>
+<div class="row">
+  <div class="col-md-12 text-center">
+    <h1 class="display-1">Rock, Paper, Scissors</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 mx-auto">
+    <form action="/play" >
+      <div class="form-group">
+        <label for="player_name">Player 1</label>
+        <input class="form-control" type="text" placeholder="Name"name="player1_name">
+      </div>
+      <div class="form-group">
+        <label for="player2_name">Player 2</label>
+        <input class="form-control" type="text" placeholder="Name" name="player2_name">
+      </div>
+      <input class="btn btn-outline-light"type="submit" value="Let's Play">
+    </form>
+  </div>
+</div>

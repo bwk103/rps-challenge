@@ -15,12 +15,40 @@ describe Weapon do
       expect(rock).to respond_to(:beats?).with(1).argument
     end
 
-    it "returns true when the current type beats the argument passed" do
+    it "rock beats scissors" do
       expect(rock.beats?(scissors)).to eq true
     end
 
-    it "returns false when the argument passed beats the current type" do
+    it "rock ties with rock" do
+      expect(rock.beats?(rock)).to eq false
+    end
+
+    it "rock loses to paper" do
       expect(rock.beats?(paper)).to eq false
+    end
+
+    it "paper beats rock" do
+      expect(paper.beats?(rock)).to eq true
+    end
+
+    it "paper ties with paper" do
+      expect(paper.beats?(paper)).to eq false
+    end
+
+    it "paper loses to scissors" do
+      expect(paper.beats?(scissors)).to eq false
+    end
+
+    it "scissors beats paper" do
+      expect(scissors.beats?(paper)).to eq true
+    end
+
+    it "scissors ties with scissors" do
+      expect(scissors.beats?(scissors)).to eq false
+    end
+
+    it "scissors loses to rock" do
+      expect(scissors.beats?(rock)).to eq false
     end
   end
 end

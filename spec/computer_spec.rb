@@ -3,10 +3,10 @@ require 'computer'
 describe Computer do
   let(:computer) { described_class.new }
 
-  describe "#type" do
+  describe "#weapon" do
     it "returns the computer's choice of weapon" do
-      options = [:Rock, :Paper, :Scissors]
-      expect(options).to include computer.weapon.type
+      allow_any_instance_of(Array).to receive(:sample).and_return('Paper')
+      expect(computer.weapon.type).to eq :Paper
     end
   end
 end
