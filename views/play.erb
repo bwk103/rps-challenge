@@ -1,10 +1,10 @@
 <div class="row">
   <div class="lg-col-6 mx-auto">
-    <h1><%=@game.player1.name%>, select your weapon!</h1>
+    <h1><%=@game.current_player.name%>, select your weapon!</h1>
   </div>
 </div>
 
-<form action="/choice">
+<form action="/choice" method="post">
   <div class="row">
     <div class="col-12 text-center">
       <input class="btn btn-primary btn-lg" type="submit" name="choice" value="Rock">

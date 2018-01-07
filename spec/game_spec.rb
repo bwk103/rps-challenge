@@ -1,12 +1,13 @@
 require 'game'
 describe Game do
-  let(:game) { described_class.new(player, computer) }
-  let(:player) { double(:player) }
+  let(:game) { described_class.new(player1, computer) }
+  let(:player1) { double(:player) }
+  let(:player2) { double(:player2) }
   let(:computer) { double(:computer) }
 
   describe "#player1" do
     it "returns player 1" do
-      expect(game.player1).to eq player
+      expect(game.player1).to eq player1
     end
   end
 
@@ -35,6 +36,20 @@ describe Game do
       allow(game).to receive(:player_wins?).and_return(false)
       game.decide_result
       expect(game.result).to eq :lose
+    end
+  end
+
+  describe '#current_player' do
+    it "returns the current player" do
+      expect(game.current_player).to eq player1
+    end
+  end
+
+  describe '#switch_players' do
+    it "alternates the current player" do
+      game = described_class.new(player1, player2)
+      game.switch_players
+      expect(game.current_player).to eq player2
     end
   end
 end
