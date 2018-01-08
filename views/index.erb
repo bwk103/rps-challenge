@@ -1,21 +1,22 @@
-
-<div class="row">
-  <div class="col-md-12 text-center">
-    <h1 class="display-1">Rock, Paper, Scissors</h1>
+<div id="index">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1 class="display-2">Rock Paper Scissors Spock Lizard</h1>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-8 mx-auto">
-    <form action="/play" method="post">
-      <div class="form-group">
-        <label for="player_name">Player 1</label>
-        <input class="form-control" type="text" placeholder="Name"name="player1_name">
-      </div>
-      <div class="form-group">
-        <label for="player2_name">Player 2</label>
-        <input class="form-control" type="text" placeholder="Name" name="player2_name">
-      </div>
-      <input class="btn btn-outline-light"type="submit" value="Let's Play">
-    </form>
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <form action="/play" method="post">
+        <div class="form-group">
+          <label for="player_name">Player 1</label>
+          <input class="form-control" type="text" placeholder="Name"name="player1_name">
+        </div>
+        <div class="form-group">
+          <label for="player2_name">Player 2</label>
+          <input class="form-control" type="text" placeholder="Name (leave blank for single player game)" name="player2_name">
+        </div>
+        <input class="btn btn-outline-dark"type="submit" value="Let's Play">
+      </form>
+    </div>
   </div>
 </div>

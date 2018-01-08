@@ -1,47 +1,75 @@
 body {
-  background: #19415E;
-  font-family: 'Concert One', cursive;
+  background: #F7F7FF;
+  font-family: 'Roboto', sans-serif;
 }
 
-h1 {
-  margin-top: 50px;
-  color: #EAF9F9;
-  font-family: 'Concert One', cursive;
-  text-shadow: 1px 2px #9AD5E2
+#index h1 {
+  color: #577399;
+  margin-top: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  opacity: 0.7
 }
 
-form {
-  color: #EAF9F9
+#index form {
+  margin-top: 30px;
 }
 
-label {
-  color: #EAF9F9
+#index form label {
+ color: #577399;
 }
 
-button .svg-inline--fa {
-  font-size: 280px;
+#index form .btn {
+  color: #577399;
+  border-color: #577399
+}
+
+#weapon_select {
+  background: #F7F7FF;
+  margin-top: 100px;
+}
+
+#weapon_select h1 {
+  color: #577399;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  opacity: 0.7;
+  margin-bottom: 50px;
+}
+
+#weapon_select p {
+  color: #FE5F55;
+  margin-top: 10px;
+}
+
+#weapon_select .svg-inline--fa {
+  font-size: 90px;
+}
+
+#weapon_select form .btn {
+  color: #577399;
+  border-color: #577399
 }
 
 .result h1 {
-  font-size: 80px;
+  margin-top: 200px;
+  color: #577399;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  opacity: 0.7;
+  margin-bottom: 20px;
 }
 
-.btn {
-  margin: 10px 10px
+.result span {
+  color: #FE5F55;
+  text-transform: uppercase;
 }
 
-.btn-primary {
-  font-size: 30px;
-  color: #EAF9F9;
-  letter-spacing: 1px;
-  line-height: 25px;
-  border: 2px solid #EAF9F9;
-  border-radius: 40px;
-  background: transparent;
-  transition: all 0.3s ease 0s;
+.result h2 {
+  color: #577399;
 }
 
-.card {
-  background-color: #19415E;
-
+.result .btn {
+  color: #577399;
+  border-color: #577399
 }

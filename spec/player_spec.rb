@@ -2,7 +2,7 @@ require 'player'
 
 describe Player do
   let(:player) { described_class.new('Bob') }
-  let(:rock) { double(:rock)}
+  let(:rock) { double(:rock) }
 
   describe '#name' do
     it "returns the player's name" do
