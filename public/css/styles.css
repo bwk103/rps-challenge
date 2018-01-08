@@ -40,3 +40,8 @@ button .svg-inline--fa {
   background: transparent;
   transition: all 0.3s ease 0s;
 }
+
+.card {
+  background-color: #19415E;
+
+}

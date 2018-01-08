@@ -1,8 +1,10 @@
 class Weapon
   RULES = {
-          Rock: :Scissors,
-          Paper: :Rock,
-          Scissors: :Paper
+          Rock: [:Scissors, :Lizard],
+          Paper: [:Rock, :Spock],
+          Scissors: [:Paper, :Lizard],
+          Spock: [:Scissors, :Rock],
+          Lizard: [:Spock, :Paper]
           }
 
   attr_reader :type
@@ -12,7 +14,7 @@ class Weapon
   end
 
   def beats?(weapon)
-    RULES[type] == weapon.type
+    RULES[type].include?(weapon.type)
   end
 
 end
