@@ -7,7 +7,7 @@ feature 'game ends', type: :feature do
 
   scenario 'players are congratulated if they win' do
     click_button 'Scissors'
-    expect(page).to have_content 'You win!'
+    expect(page).to have_content 'Bob wins!'
   end
 
   scenario 'players are told if they lose' do

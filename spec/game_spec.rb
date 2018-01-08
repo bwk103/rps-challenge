@@ -21,21 +21,21 @@ describe Game do
     it "sets @result to :tie if both players select the same weapon" do
       allow(game).to receive(:a_tie?).and_return(true)
       game.decide_result
-      expect(game.result).to eq :tie
+      expect(game.tie).to eq true
     end
 
-    it "sets @result to :win if the player's weapon wins" do
+    it "sets @winner to player1 if the player's weapon wins" do
       allow(game).to receive(:a_tie?).and_return(false)
-      allow(game).to receive(:player_wins?).and_return(true)
+      allow(game).to receive(:player1_wins?).and_return(true)
       game.decide_result
-      expect(game.result).to eq :win
+      expect(game.winner).to eq player1
     end
 
-    it "sets @result to :lose if the player's weapon wins" do
+    it "sets @winner to player2 if the player's weapon wins" do
       allow(game).to receive(:a_tie?).and_return(false)
-      allow(game).to receive(:player_wins?).and_return(false)
+      allow(game).to receive(:player1_wins?).and_return(false)
       game.decide_result
-      expect(game.result).to eq :lose
+      expect(game.winner).to eq computer
     end
   end
 

@@ -42,6 +42,10 @@ class RPSApp < Sinatra::Base
 
   get '/result' do
     @game.decide_result
-    erb(@game.result)
+    if @game.tie
+      erb(:tie)
+    else
+      erb(:result)
+    end
   end
 end

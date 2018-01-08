@@ -1,5 +1,5 @@
 class Game
-  attr_reader :player1, :player2, :result, :current_player
+  attr_reader :player1, :player2, :current_player, :tie, :winner
 
   def initialize(player1, player2)
     @player1 = player1
@@ -16,9 +16,9 @@ class Game
   end
 
   def decide_result
-    return @result = :tie if a_tie?
-    return @result = :lose unless player_wins?
-    @result = :win
+    return @tie = true if a_tie?
+    return @winner = player2 unless player1_wins?
+    @winner = player1
   end
 
   def switch_players
@@ -31,7 +31,7 @@ class Game
     player1.weapon.type == player2.weapon.type
   end
 
-  def player_wins?
+  def player1_wins?
     player1.weapon.beats?(player2.weapon)
   end
 end
